@@ -1,0 +1,10 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Home</a>
+      <a class="navbar-brand" href="/">Workouts</a>
+    </div>
+    <!-- <button type="button" class="btn btn-primary navbar-btn">Add Workout</button> -->
+    <%= button_to 'Add Workout', new_workout_path, :class => 'btn btn-primary navbar-btn', :method => 'get' %>
+  </div>
+</nav>
