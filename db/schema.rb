@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713223649) do
+ActiveRecord::Schema.define(version: 20160714212613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "components", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "component_type"
+    t.string   "result_type"
+    t.string   "result_units"
+    t.string   "result_sort_order"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -33,11 +44,15 @@ ActiveRecord::Schema.define(version: 20160713223649) do
   end
 
   create_table "workouts", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "score_units"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.datetime "workout_date"
+    t.string   "title"
+    t.string   "location"
+    t.text     "notes"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["user_id"], name: "index_workouts_on_user_id", using: :btree
   end
 
+  add_foreign_key "workouts", "users"
 end

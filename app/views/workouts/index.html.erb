@@ -1,11 +1,15 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Workouts</h1>
 
-<table class="table table-striped">
+<table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Score units</th>
+      <th>User</th>
+      <th>Workout date</th>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Notes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,12 +17,14 @@
   <tbody>
     <% @workouts.each do |workout| %>
       <tr>
-        <td><%= workout.name %></td>
-        <td><%= workout.description %></td>
-        <td><%= workout.score_units %></td>
+        <td><%= workout.user %></td>
+        <td><%= workout.workout_date %></td>
+        <td><%= workout.title %></td>
+        <td><%= workout.location %></td>
+        <td><%= workout.notes %></td>
         <td><%= link_to 'Show', workout %></td>
         <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
-        <td><%= link_to 'Delete', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

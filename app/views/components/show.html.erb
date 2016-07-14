@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @component.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @component.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @component.type %>
+</p>
+
+<p>
+  <strong>Result type:</strong>
+  <%= @component.result_type %>
+</p>
+
+<p>
+  <strong>Result units:</strong>
+  <%= @component.result_units %>
+</p>
+
+<p>
+  <strong>Result sort order:</strong>
+  <%= @component.result_sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_component_path(@component) %> |
+<%= link_to 'Back', components_path %>
