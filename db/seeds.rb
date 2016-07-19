@@ -8,16 +8,6 @@
 
 User.create!(email: "decuirm@gmail.com", password: "password", name: "Matt Decuir")
 
-# Workout.create(user_id: 1,
-#  workout_date: "2016-07-19 12:00:00.00 PM",
-#  title: "7/19/16 WOD",
-#  location: nil,
-#  notes: "Initial workout!",
-#  components: [
-#    {Component1, score},
-#    {Component2, score}
-#  ])
-
 Component.create!(
   title: "500m Row", 
   description: "500m Row",
@@ -78,3 +68,7 @@ Component.create!(title: "5x5 Deadlift",
   result_type: "weight",
   result_units: 'lbs',
   result_sort_order: 'desc')
+
+Workout.create!(user_id: 1, workout_date: "2016-07-19 12:00:00.00 PM", title: "7/19/16 WOD")
+
+#Workout.find(1).workout_components.create(component: Component.find(2))

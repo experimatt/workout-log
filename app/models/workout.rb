@@ -14,4 +14,14 @@ class Workout < ApplicationRecord
   belongs_to :user
   has_many :workout_components, dependent: :destroy
   has_many :components, through: :workout_components
+
+  def create_without_results
+  end
+
+  def create_with_results
+  end
+
+  def add_results
+  end
+  
 end
