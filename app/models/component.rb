@@ -14,4 +14,6 @@
 #
 
 class Component < ApplicationRecord
+  has_many :workout_components
+  has_many :workouts, through: :workout_components
 end

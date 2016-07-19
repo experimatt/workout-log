@@ -6,12 +6,12 @@
 #  user_id      :integer
 #  workout_date :datetime
 #  title        :string
-#  location     :string
-#  notes        :text
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
 
 class Workout < ApplicationRecord
   belongs_to :user
+  has_many :workout_components, dependent: :destroy
+  has_many :components, through: :workout_components
 end

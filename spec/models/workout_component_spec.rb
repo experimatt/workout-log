@@ -1,17 +1,18 @@
 # == Schema Information
 #
-# Table name: workouts
+# Table name: workout_components
 #
 #  id           :integer          not null, primary key
-#  user_id      :integer
-#  workout_date :datetime
-#  title        :string
+#  workout_id   :integer
+#  component_id :integer
+#  results      :string
+#  notes        :text
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
 
 require 'rails_helper'
 
-RSpec.describe Workout, type: :model do
+RSpec.describe WorkoutComponent, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end
