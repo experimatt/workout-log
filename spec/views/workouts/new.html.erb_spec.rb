@@ -5,8 +5,6 @@ RSpec.describe "workouts/new", type: :view do
     assign(:workout, Workout.new(
       :user => nil,
       :title => "MyString",
-      :location => "MyString",
-      :notes => "MyText"
     ))
   end
 
@@ -18,10 +16,6 @@ RSpec.describe "workouts/new", type: :view do
       assert_select "input#workout_user_id[name=?]", "workout[user_id]"
 
       assert_select "input#workout_title[name=?]", "workout[title]"
-
-      assert_select "input#workout_location[name=?]", "workout[location]"
-
-      assert_select "textarea#workout_notes[name=?]", "workout[notes]"
     end
   end
 end

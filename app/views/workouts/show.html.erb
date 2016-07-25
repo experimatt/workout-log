@@ -15,15 +15,5 @@
   <%= @workout.title %>
 </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @workout.location %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @workout.notes %>
-</p>
-
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>

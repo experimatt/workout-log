@@ -5,15 +5,11 @@ RSpec.describe "workouts/index", type: :view do
     assign(:workouts, [
       Workout.create!(
         :user => nil,
-        :title => "Title",
-        :location => "Location",
-        :notes => "MyText"
+        :title => "Title"
       ),
       Workout.create!(
         :user => nil,
-        :title => "Title",
-        :location => "Location",
-        :notes => "MyText"
+        :title => "Title"
       )
     ])
   end
@@ -22,7 +18,5 @@ RSpec.describe "workouts/index", type: :view do
     render
     assert_select "tr>td", :text => nil.to_s, :count => 2
     assert_select "tr>td", :text => "Title".to_s, :count => 2
-    assert_select "tr>td", :text => "Location".to_s, :count => 2
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
   end
 end
