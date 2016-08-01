@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>User:</strong>
-  <%= @workout.user %>
+  <%= @workout.user.name %>
 </p>
 
 <p>
@@ -13,6 +11,21 @@
 <p>
   <strong>Title:</strong>
   <%= @workout.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @workout.description %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @workout.score %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @workout.units %>
 </p>
 
 <%= link_to 'Edit', edit_workout_path(@workout) %> |

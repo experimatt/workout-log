@@ -4,8 +4,9 @@ class CreateWorkouts < ActiveRecord::Migration[5.0]
       t.references :user, foreign_key: true
       t.datetime :workout_date
       t.string :title
-      t.string :location
-      t.text :notes
+      t.text :description
+      t.string :score
+      t.string :units
 
       t.timestamps
     end

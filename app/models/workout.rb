@@ -6,13 +6,13 @@
 #  user_id      :integer
 #  workout_date :datetime
 #  title        :string
+#  description  :text
+#  score        :string
+#  units        :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
 
 class Workout < ApplicationRecord
   belongs_to :user, inverse_of: :workouts
-  has_many :workout_components, dependent: :destroy
-  has_many :components, through: :workout_components
-
 end

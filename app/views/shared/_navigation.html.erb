@@ -2,20 +2,21 @@
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">Home</a>
-      <a class="navbar-brand" href="/">Workouts</a>
-    </div>
-    <!-- <button type="button" class="btn btn-primary navbar-btn">Add Workout</button> -->
-    <%= button_to 'Add Workout', new_workout_path, :class => 'btn btn-primary navbar-btn', :method => 'get' %>
+      <a class="navbar-brand" href="/workouts">Workouts</a>
 
-    <p class="navbar-text pull-right">
-  <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-  <% end %>
+      <%= button_to 'Add Workout', new_workout_path, :class => 'btn btn-primary navbar-btn', :method => 'get' %>
+
+      <p class="navbar-text pull-right">
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <% end %>
+      </p>
+    </div>
 
   </div>
 </nav>

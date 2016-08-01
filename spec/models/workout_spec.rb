@@ -6,6 +6,9 @@
 #  user_id      :integer
 #  workout_date :datetime
 #  title        :string
+#  description  :text
+#  score        :string
+#  units        :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
