@@ -21,9 +21,9 @@ const UserInfo = () => {
             className="h-16 w-16 rounded-full"
           />
           <ul className="leading-loose py-4">
-            <li>
+            {/* <li>
               <span className="font-semibold">Name:</span> {user.name}
-            </li>
+            </li> */}
             <li>
               <span className="font-semibold">Email:</span> {user.email}
             </li>
